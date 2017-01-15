@@ -1,0 +1,103 @@
+@import 'bootstrapMq';
+
+body{
+  background: url(../image/background-lg.jpeg) repeat-y;
+  //source: https://www.pexels.com/photo/black-framed-eyeglasses-beside-big-ben-pictures-and-notebook-164682/
+  padding-bottom: 55px;
+}
+
+.container-fluid{
+  width: 98%;
+  margin: 0 auto;
+}
+
+.message, form, #contact{
+  background: rgba(255, 255, 255, 0.6);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+header{
+  .navbar-header{
+    margin: 15px auto;
+    img{
+      height: 25px;
+      width: 25px;
+      margin-left: 10px;
+    }
+    a{
+      color: #333;
+      &:hover, &:visited{
+        color: #333;
+        text-decoration: none;
+        border: transparent;
+      }
+    }
+  }
+  .navbar-right{
+    margin-right: 5px;
+  }
+}
+
+.header{
+  text-align: center;
+}
+
+form{
+
+  @include clearFix;
+  .form-control{
+    width: 95%;
+    margin: 1% auto;
+  }
+  input[type="submit"]{
+    float: right;
+    margin: 1%;
+    margin-right: 2.5%;
+  }
+}
+
+.form-horizontal .form-group{
+  margin: 0 auto;
+}
+
+.message{
+  a{
+    margin: 1%;
+    float: right;
+  }
+  p{
+    width: 98%;
+    margin: 1% auto;
+  }
+  p:last-child{
+    @include clearFix;
+    @include mQ($sm){
+      width: 90%;
+    }
+  }
+}
+
+#contact{
+  text-align: center;
+  h3, li, a, a:hover{
+    color: #000;
+  }
+  .btn{
+    margin: 5px auto;
+  }
+  @include mQ($sm){
+    a{
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.8s;
+      &:hover{
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px solid #000;
+      }
+    }
+  }
+
+}
