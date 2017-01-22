@@ -89,7 +89,7 @@ form{
     margin: 5px auto;
   }
   @include mQ($sm){
-    a{
+    a.link{
       border-bottom: 1px solid transparent;
       transition: border-bottom 0.8s;
       &:hover{

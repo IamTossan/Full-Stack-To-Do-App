@@ -1,9 +1,12 @@
 //Angular app
 var todoApp = angular.module('todoApp', ['ngRoute']);
 
-todoApp.config(['$routeProvider', function($routeProvider){
+todoApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
+
+  $locationProvider.html5Mode(true);
+
   $routeProvider
-    .when('/home', {
+    .when('/', {
       templateUrl: 'views/main.html',
       controller: 'todoController'
     })
@@ -11,7 +14,7 @@ todoApp.config(['$routeProvider', function($routeProvider){
       templateUrl: 'views/contact.html'
     })
     .otherwise({
-      redirectTo: '/home'
+      redirectTo: '/'
     });
 }]);
 
