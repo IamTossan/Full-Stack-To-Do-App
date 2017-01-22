@@ -92,7 +92,7 @@ form{
     a.link{
       border-bottom: 1px solid transparent;
       transition: border-bottom 0.8s;
-      &:hover{
+      &:hover, &:visited{
         color: #000;
         text-decoration: none;
         border-bottom: 1px solid #000;
